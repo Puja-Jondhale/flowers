@@ -1,0 +1,153 @@
+/* HEADER MAIN */
+.header {
+  width: 100%;
+  background-color: white;
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo img {
+  height: 80px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Desktop Nav */
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li a {
+  color: #222;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #e91e63;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Search */
+.search-input {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 150px;
+}
+
+.btn-search {
+  padding: 6px 15px;
+  border-radius: 20px;
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-search:hover {
+  background-color: #e91e63;
+}
+
+/* Icons */
+.icon-group a {
+  margin-left: 10px;
+  color: #222;
+  text-decoration: none;
+}
+
+.btn-login {
+  background-color: #001f3f;
+  color: white !important;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.btn-login:hover {
+  background-color: #004080;
+}
+
+/* 3 Dot Icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  background: white;
+  border-top: 1px solid #eee;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+
+.mobile-menu ul li {
+  padding: 10px 0;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+}
+
+/* ============================= */
+/* ✅ RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+  /* Hide desktop nav */
+  .nav-menu {
+    display: none;
+  }
+
+  /* Hide search + login on mobile */
+  .search-input,
+  .btn-search,
+  .icon-group {
+    display: none;
+  }
+
+  /* Show 3 dot icon */
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}
